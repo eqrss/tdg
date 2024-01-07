@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpnrd3rewjux"]
+
+[ext_resource type="Texture2D" uid="uid://bvwkmvh4t072h" path="res://scenes/enemy/enemy_rat.png" id="1_7kskc"]
+[ext_resource type="Script" path="res://scenes/enemy/basic_enemy.gd" id="1_mx3bt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0f2ui"]
+radius = 5.0
+
+[node name="Basic_Enemy" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 0
+script = ExtResource("1_mx3bt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+texture = ExtResource("1_7kskc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_0f2ui")
